@@ -1,0 +1,30 @@
+{
+  "name": "matchbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "build": "npx webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx webpack --watch --info-verbosity verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "i18n": "^0.8.3",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  }
+}
