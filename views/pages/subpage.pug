@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    include ../parts/head.pug
+
+    title Network Service Consulting
+
+  body
+    include ../parts/header-bar.pug
+
+    .body-part
+      include ../parts/side-bar.pug
+
+      if contentTag == 'networkservice'
+        include ../parts/networkservice
+
+
+    include ../parts/footer.pug
+

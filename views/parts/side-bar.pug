@@ -1,0 +1,18 @@
+mixin menuItem(svgShape, svgAttr, txt, hrefCont)
+  li(class="menu-item mdc-list-item")
+    a(href=hrefCont)
+      .item-icon(class="mdc-list-item__graphic")
+        svg(class="polygon" viewBox="0 0 44 42" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+          #{svgShape}()&attributes(svgAttr)
+
+      .item-text(class="mdc-list-item__text")= txt
+
+.side-bar
+   .menu-list-wrapper
+     ul(class="menu-list mdc-list--avatar")
+       +menuItem('polygon', {'points': "22.0081142 1 43.0373586 16.2786405 35.004902 41 9.01132631 41 0.978869674 16.2786405"}, 'Scrum Training', '/scrum-training')
+       +menuItem('image', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'xlink:href': 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAaZJREFUWAntmc1tAjEQhXHOVIBWyiEUQB+RSCFIlEAjVJFDuKUQDtwiCggcE22+B4vIjiZLJONdH/ykp5XHP/MYj8E7hFEH6rqu6H6Bz/AJTuAYxuDI5D3cwTf4GkL44Pl/IGwC1/ALpoZ8yJc+/G0wcA4/Yd+Qz3mnQgYs4Xffyn75k++lK5IORW5IcRed0tCOJAbl3F/bKvsKzmDsARlpjWYtrdnl85qTDFSSenjH+OiG/A5GrQ3lw8P65IKeCnqnVRPDHXR0LiEf0BMpTZVCvoAWCn2yyFnF8gW97V5I4AZarOwiqdsIUE5abCRwa620Z6kF2fXl09GxlcCD0xF9Wq2AW2006HRbHJSgtZ3Mb2Pyw2F9qu1pefAG5mQrAmN3o0SwRDA2ArHzSw6WCMZGIHZ+ycESwdgIxM5XDqpW0gL3skEurC0R58ZRAlXIsZhaQw9tz+deAlVlsmi/2dveNG3P507X7OxfO/N+cdduEcV8Sx+NwLyLR43IfMtvEiiw1fkWMM8STyIVSa+Qgzkp5NP7qrlIuz4ZmE0RvbPEgdDB/4b4AUEhu5qTsc4sAAAAAElFTkSuQmCC'}, 'Network Service Consulting', '/network-service')
+       +menuItem('circle', {'cx': 20, 'cy': 20, 'r': 19}, 'Miscellaneous', '/miscellaneous')
+       +menuItem('polygon', {'points': '20.5 0 40 39 1 39'}, 'Dorry Platform', '/dorry-platform')
+         
+

@@ -1,13 +1,19 @@
-$main-col-min-width: 350px;
+@import '_variables';
 
-%head-space {
-    margin: 0;
-    padding: 5px 30px 5px 30px;
-}
+@import '@material/layout-grid/mdc-layout-grid';
+@import '@material/list/mdc-list';
+@import '@material/card/mdc-card';
+@import '@material/button/mdc-button';
+
+@import 'elements';
+
+@import 'head-bar';
+@import 'foot';
+@import 'sub-page-networkservice';
 
 body {
     color: white;
-    background-color: #191c20;
+    background-color: $mdc-theme-background;
 }
 
 .item-label {
@@ -16,56 +22,6 @@ body {
     opacity: 0.08;
 }
 
-.head-bar {
-    @extend %head-space;
-    align-items: baseline;
-    display: flex;
-
-    .title {
-        color: #FFFFFF;
-        font-family: Roboto-Bold;
-        font-size: 24px;
-        text-align: left;
-    }
-
-    .sub-title {
-        color: #FFFFFF;
-        font-family: Roboto-Regular;
-        font-size: 18px;
-        margin-left: 15px;
-        text-align: left;
-    }
-
-    .hiring-link {
-        align-self: center;
-        color: #FFFFFF;
-        font-family: Roboto-Bold;
-        font-size: 14px;
-        margin-left: auto;
-        text-align: right;
-        text-decoration: none;
-    }
-}
-
-.foot-bar {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-
-    opacity: 0.6;
-    font-family: Roboto-Regular;
-    font-size: 14px;
-    color: #FFFFFF;
-    text-align: left;
-    line-height: 20px;
-
-    margin-top: 95px;
-    padding: 25px 30px 25px 30px; 
-
-    .foot-txt-box {
-        padding: 0 16px 0 16px;
-    }
-}
 
 .content {
     display: flex;
@@ -181,10 +137,6 @@ body {
             }
         }
     }
-
-    .side-bar {
-        @extend %head-space;
-    }
 }
 
 @media only screen and (max-width: 970px) {
@@ -220,3 +172,4 @@ body {
         padding-right: $col-padding;
     }
 }
+

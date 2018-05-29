@@ -1,18 +1,24 @@
+mixin menuBox(svgTag, svgClassTag, svgAttr, title, desc)
+  .item-box
+    .back-box
+    .col-icon
+      svg(class=svgClassTag viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet")
+        #{svgTag}()&attributes(svgAttr)
+    .col-content
+      .title= title
+      .title-desc= desc
+
+
+
 doctype html
 html
   head
-    meta(name="viewport" content="width=device-width, initial-scale=1.0")
-
-    link(type="text/css" rel="stylesheet" href="/assets/font/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css")
-    link(type="text/css" rel="stylesheet" href="/assets/dist/mtbx.css")
+    include parts/head.pug  
 
     title Matchbox Lab
 
   body
-    .head-bar
-      span(class="title") Matchbox
-      span(class="sub-title") Lab
-      a(class="hiring-link" href="/hiring") We are hiring
+    include parts/header-bar.pug
 
     .content
       .col-left
@@ -25,14 +31,7 @@ html
 
       .col-right
         .container
-          .item-box
-            .back-box
-            .col-icon
-              svg(class="polygon" viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet")
-                polygon(points="18.75,1.875 1.875,14.625 7.5,37.125 30,37.125 35.625,14.625")
-            .col-content
-              .title Scrum Training
-              .title-desc Scrum is an iterative and incremental agile software development framework for managing product development. 
+          +menuBox('polygon', 'polygon', {points: '18.75,1.875 1.875,14.625 7.5,37.125 30,37.125 35.625,14.625'}, 'Scrum Training', 'Scrum is an iterative and incremental agile software development framework for managing product development.')
 
           .item-box
             .back-box
@@ -61,11 +60,5 @@ html
               .title Dorry Platform
               .title-desc Dorry is a professional enterprise platform, continually delivering secure enterprise services based on the leading technology...
 
-    .foot-bar
-      span(class="foot-txt-box") © 2017-2018 Copyright Matchbox Lab
-      span |
-      span(class="foot-txt-box") Nanjing, Jangsu, China
-      span |
-      span(class="foot-txt-box") info@machbox.lab
-      span |
-      span(class="foot-txt-box") 025-32478190
+    include ./parts/footer.pug
+

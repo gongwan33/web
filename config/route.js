@@ -10,6 +10,11 @@ app.get(getLocaleStylePath('/'), (req, res) => {
     res.render('index', {pageLocale: locale});
 });
 
+app.get(getLocaleStylePath('/network-service'), (req, res) => {
+    let locale = getLocale();
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'networkservice'});
+});
+
 
 app.listen(PORT, () => {
     console.log(`Example app listening on port ${PORT}!`);

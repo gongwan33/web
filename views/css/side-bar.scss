@@ -1,0 +1,42 @@
+.side-bar {
+    margin: 30px;
+    min-width: 200px;
+    width: 25%;
+
+    .menu-list {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        .menu-item {
+            padding: 0;
+
+            a {
+                display: inherit;
+
+                @include mdc-typography(subtitle2);
+
+                opacity: 0.5;
+                color: #FFFFFF;
+                text-decoration: none;
+
+                .item-icon {
+                    svg {
+                        fill: transparent;
+                        opacity: 0.5;
+                        stroke: #FFF;
+                        stroke-width: 4px;
+                        width: 80%;
+                    }
+                }
+
+                .item-text {
+                    align-items: center;
+                    display: flex;
+                    white-space: pre-line;
+                }
+            }
+        }
+    }
+
+}

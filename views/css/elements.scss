@@ -1,0 +1,50 @@
+%head-space {
+    margin: 0;
+    padding: 5px 30px 5px 30px;
+}
+
+%git-button {
+    text-transform: none;
+
+    @include mdc-button-ink-color($mdc-theme-on-primary);
+    @include mdc-button-container-fill-color($mdc-theme-primary);
+    @include mdc-button-corner-radius($button-radius);
+}
+
+%git-card {
+    margin-bottom: 20px;
+    padding: 25px 30px;
+
+    @include mdc-card-outline($card-outline);
+    @include mdc-card-corner-radius($card-radius);
+
+    .card-instructions {
+        .title {
+            color: $mdc-theme-on-surface; 
+            opacity: 0.7;
+            @include mdc-typography(subtitle1);
+
+            font-weight: bold;
+        }
+
+        .desc {
+            color: $mdc-theme-on-surface; 
+            opacity: 0.5;
+            @include mdc-typography(body2);
+        }
+    }
+
+    .mdc-card__actions {
+        margin-top: 25px;
+        padding: 0;
+
+        .mdc-button {
+            margin-right: 10px;
+            @extend %git-button;
+        }
+    }
+}
+
+.icon-italic {
+    font-style: italic; 
+}
