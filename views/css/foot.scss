@@ -1,3 +1,5 @@
+$back-arrow-margin-right: 15px;
+
 .foot-bar {
     align-items: center;
     display: flex;
@@ -6,7 +8,7 @@
     opacity: 0.6;
     font-family: Roboto-Regular;
     font-size: 14px;
-    color: #FFFFFF;
+    color: $mdc-theme-on-primary;
     text-align: left;
     line-height: 20px;
 
@@ -17,4 +19,37 @@
     }
 }
 
+.foot-wrapper {
+    display: flex;
+
+    .side-bar {
+        @extend %sidebar-space;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a:hover{
+            .icon {
+                margin-right: $back-arrow-margin-right;
+                opacity: 1;
+            }
+        }
+
+        a {
+            @include mdc-typography(subtitle2);
+
+            color: $mdc-theme-on-primary;
+
+            .icon {
+                margin-right: 0;
+                opacity: 0;
+                transition: mdc-animation-enter(margin, 1000ms);
+            }
+        }
+    }
+
+    .copyright-content {
+        width: 100%;
+    }
+}
 

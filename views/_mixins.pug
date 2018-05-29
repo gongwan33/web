@@ -1,0 +1,34 @@
+mixin menuBox(svgTag, svgClassTag, svgAttr, title, desc, href)
+  li(class="item-box mdc-list-item")
+    a(href=href)
+      .mdc-list-item__graphic
+        svg(class=svgClassTag viewBox="0 0 40 40" preserveAspectRatio="xMidYMid meet")
+          #{svgTag}()&attributes(svgAttr)
+      .mdc-list-item__text
+        = title
+        .mdc-list-item__secondary-text= desc
+
+mixin projectCard(title, desc, githubHref, gitbookHref) 
+  .mdc-card
+    .card-instructions
+      .title= title
+      .desc= desc
+
+    .mdc-card__actions
+      .mdc-card__actions-buttons
+        button(class="mdc-button ")
+          i(class="mdc-button__icon fab fa-github")
+          | GitHub
+        button(class="mdc-button ")
+          i(class="mdc-button__icon fas fa-book icon-italic")
+          | GitBook
+
+mixin menuItem(svgShape, svgAttr, txt, hrefCont)
+  li(class="menu-item mdc-list-item")
+    a(href=hrefCont)
+      .item-icon(class="mdc-list-item__graphic")
+        svg(class="polygon" viewBox="0 0 44 42" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
+          #{svgShape}()&attributes(svgAttr)
+
+      .item-text(class="mdc-list-item__text")= txt
+

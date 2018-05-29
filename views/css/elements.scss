@@ -3,11 +3,18 @@
     padding: 5px 30px 5px 30px;
 }
 
+%sidebar-space {
+    min-width: $sidebar-min-width;
+    max-width: $sidebar-max-width;
+    width: $sidebar-pa;
+}
+
 %git-button {
     @include mdc-button-ink-color($mdc-theme-on-primary);
-    @include mdc-button-container-fill-color($mdc-theme-primary);
+    @include mdc-button-container-fill-color($mdc-theme-secondary);
     @include mdc-button-corner-radius($button-radius);
 
+    opacity: 0.8;
     text-transform: none;
 }
 
@@ -81,3 +88,5 @@
         }
     }
 }
+
+

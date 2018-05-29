@@ -4,16 +4,23 @@
 @import '@material/list/mdc-list';
 @import '@material/card/mdc-card';
 @import '@material/button/mdc-button';
+@import '@material/animation/functions';
 
 @import 'elements';
 
 @import 'head-bar';
 @import 'foot';
-@import 'sub-page-networkservice';
+@import 'sub-page';
 
 body {
     color: white;
     background-color: $mdc-theme-background;
+}
+
+a {
+    align-items: center;
+    display: inherit;
+    text-decoration: none;
 }
 
 .item-label {
@@ -29,13 +36,13 @@ body {
     margin-bottom: 95px;
 
     .col-left {
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 80px 0 80px;
-            width: 50%;
-            min-width: $main-col-min-width;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 80px 0 80px;
+        width: 50%;
+        min-width: $main-col-min-width;
 
         .container {
             padding: 10%;

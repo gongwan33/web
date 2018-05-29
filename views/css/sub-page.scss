@@ -1,0 +1,70 @@
+.body-wrapper {
+    display: flex;
+    
+    .side-bar {
+        @extend %sidebar-space;
+        margin: 30px;
+
+        .menu-list {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            .menu-item {
+                padding: 0;
+
+                a {
+                    @include mdc-typography(subtitle2);
+
+                    opacity: 0.5;
+                    color: #FFFFFF;
+
+                    .item-icon {
+                        svg {
+                            fill: transparent;
+                            opacity: 0.5;
+                            stroke: #FFF;
+                            stroke-width: 4px;
+                            width: 80%;
+                        }
+                    }
+
+                    .item-text {
+                        align-items: center;
+                        display: flex;
+                        white-space: pre-line;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .page-content {
+        margin: 30px 5% 30px 5%;
+
+        .title-wrapper {
+            margin-bottom: 36px;
+
+            .title {
+                @include mdc-typography(headline6);
+
+                color: #FFF;
+                opacity: 0.9;
+            }
+
+            .desc {
+                @include mdc-typography(body2);
+
+                color: #FFF;
+                opacity: 0.7;
+            }
+        }        
+
+        .card-wrapper {
+            .mdc-card {
+                @extend %git-card;
+            }
+        }
+    }
+}

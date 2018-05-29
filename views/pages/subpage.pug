@@ -8,12 +8,12 @@ html
   body
     include ../parts/header-bar.pug
 
-    .body-part
+    .body-wrapper
       include ../parts/side-bar.pug
 
       if contentTag == 'networkservice'
         include ../parts/networkservice
 
 
-    include ../parts/footer.pug
+    include ../parts/footer-back.pug
 

@@ -1,11 +1,4 @@
-mixin menuItem(svgShape, svgAttr, txt, hrefCont)
-  li(class="menu-item mdc-list-item")
-    a(href=hrefCont)
-      .item-icon(class="mdc-list-item__graphic")
-        svg(class="polygon" viewBox="0 0 44 42" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
-          #{svgShape}()&attributes(svgAttr)
-
-      .item-text(class="mdc-list-item__text")= txt
+include ../_mixins
 
 .side-bar
    .menu-list-wrapper

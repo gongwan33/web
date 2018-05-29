@@ -1304,20 +1304,26 @@ a.mdc-list-item {
   margin: 0;
   padding: 5px 30px 5px 30px; }
 
-.body-part .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
-  border-radius: 2px;
-  text-transform: none; }
-  .body-part .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
-    color: #FFFFFF; }
-  .body-part .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
-    background-color: #FFFFFF; }
+.foot-wrapper .side-bar, .body-wrapper .side-bar {
+  min-width: 200px;
+  max-width: 300px;
+  width: 35%; }
 
-.body-part .page-content .card-wrapper .mdc-card {
+.body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
+  border-radius: 2px;
+  opacity: 0.8;
+  text-transform: none; }
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
+    color: #FFFFFF; }
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.06); }
+
+.body-wrapper .page-content .card-wrapper .mdc-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 2px;
   margin-bottom: 20px;
   padding: 25px 30px; }
-  .body-part .page-content .card-wrapper .mdc-card .card-instructions .title {
+  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .title {
     font-family: Roboto, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1330,7 +1336,7 @@ a.mdc-list-item {
     color: #FFFFFF;
     opacity: 0.7;
     font-weight: bold; }
-  .body-part .page-content .card-wrapper .mdc-card .card-instructions .desc {
+  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .desc {
     font-family: Roboto, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1342,10 +1348,10 @@ a.mdc-list-item {
     text-transform: inherit;
     color: #FFFFFF;
     opacity: 0.5; }
-  .body-part .page-content .card-wrapper .mdc-card .mdc-card__actions {
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions {
     margin-top: 25px;
     padding: 0; }
-    .body-part .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
+    .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
       margin-right: 10px; }
 
 .icon-italic {
@@ -1406,8 +1412,7 @@ a.mdc-list-item {
     font-family: Roboto-Bold;
     font-size: 14px;
     margin-left: auto;
-    text-align: right;
-    text-decoration: none; }
+    text-align: right; }
 
 .foot-bar {
   align-items: center;
@@ -1423,19 +1428,44 @@ a.mdc-list-item {
   .foot-bar .foot-txt-box {
     padding: 0 16px 0 16px; }
 
-.body-part {
+.foot-wrapper {
   display: flex; }
-  .body-part .side-bar {
-    margin: 30px;
-    min-width: 200px;
-    width: 35%; }
-    .body-part .side-bar .menu-list {
+  .foot-wrapper .side-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .foot-wrapper .side-bar a:hover .icon {
+      margin-right: 15px;
+      opacity: 1; }
+    .foot-wrapper .side-bar a {
+      font-family: Roboto, sans-serif;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+      font-weight: 500;
+      letter-spacing: 0.00714em;
+      text-decoration: inherit;
+      text-transform: inherit;
+      color: #FFFFFF; }
+      .foot-wrapper .side-bar a .icon {
+        margin-right: 0;
+        opacity: 0;
+        transition: margin 1000ms 0ms cubic-bezier(0, 0, 0.2, 1); }
+  .foot-wrapper .copyright-content {
+    width: 100%; }
+
+.body-wrapper {
+  display: flex; }
+  .body-wrapper .side-bar {
+    margin: 30px; }
+    .body-wrapper .side-bar .menu-list {
       margin: 0;
       padding: 0;
       width: 100%; }
-      .body-part .side-bar .menu-list .menu-item {
+      .body-wrapper .side-bar .menu-list .menu-item {
         padding: 0; }
-        .body-part .side-bar .menu-list .menu-item a {
+        .body-wrapper .side-bar .menu-list .menu-item a {
           font-family: Roboto, sans-serif;
           -moz-osx-font-smoothing: grayscale;
           -webkit-font-smoothing: antialiased;
@@ -1445,25 +1475,23 @@ a.mdc-list-item {
           letter-spacing: 0.00714em;
           text-decoration: inherit;
           text-transform: inherit;
-          display: inherit;
           opacity: 0.5;
-          color: #FFFFFF;
-          text-decoration: none; }
-          .body-part .side-bar .menu-list .menu-item a .item-icon svg {
+          color: #FFFFFF; }
+          .body-wrapper .side-bar .menu-list .menu-item a .item-icon svg {
             fill: transparent;
             opacity: 0.5;
             stroke: #FFF;
             stroke-width: 4px;
             width: 80%; }
-          .body-part .side-bar .menu-list .menu-item a .item-text {
+          .body-wrapper .side-bar .menu-list .menu-item a .item-text {
             align-items: center;
             display: flex;
             white-space: pre-line; }
-  .body-part .page-content {
+  .body-wrapper .page-content {
     margin: 30px 5% 30px 5%; }
-    .body-part .page-content .title-wrapper {
+    .body-wrapper .page-content .title-wrapper {
       margin-bottom: 36px; }
-      .body-part .page-content .title-wrapper .title {
+      .body-wrapper .page-content .title-wrapper .title {
         font-family: Roboto, sans-serif;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -1475,7 +1503,7 @@ a.mdc-list-item {
         text-transform: inherit;
         color: #FFF;
         opacity: 0.9; }
-      .body-part .page-content .title-wrapper .desc {
+      .body-wrapper .page-content .title-wrapper .desc {
         font-family: Roboto, sans-serif;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -1491,6 +1519,11 @@ a.mdc-list-item {
 body {
   color: white;
   background-color: #191c20; }
+
+a {
+  align-items: center;
+  display: inherit;
+  text-decoration: none; }
 
 .item-label {
   background-color: #fff;
