@@ -1,7 +1,7 @@
 .side-bar {
     margin: 30px;
     min-width: 200px;
-    width: 25%;
+    width: 35%;
 
     .menu-list {
         margin: 0;
@@ -12,10 +12,9 @@
             padding: 0;
 
             a {
-                display: inherit;
-
                 @include mdc-typography(subtitle2);
 
+                display: inherit;
                 opacity: 0.5;
                 color: #FFFFFF;
                 text-decoration: none;

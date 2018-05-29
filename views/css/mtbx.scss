@@ -26,6 +26,7 @@ body {
 .content {
     display: flex;
     flex-wrap: nowrap;
+    margin-bottom: 95px;
 
     .col-left {
             align-items: center;
@@ -66,75 +67,20 @@ body {
         width: 50%;
         min-width: $main-col-min-width;
 
-        .item-box{
-            display: flex;
-            margin-bottom: 10px;
-            position: relative;
+        .polygon {
+            stroke: #5064F1;
+        }
 
-            .back-box {
-                background: #FFFFFF;
-                left: 0;
-                height: 100%;
-                opacity: 0.05;
-                position: absolute;
-                top: 0;
-                width: 100%;
-            }
+        .square {
+            stroke: #FF583D;
+        }
 
-            .col-icon {
-                align-items: center;
-                display: flex;
-                flex-basis: 26%;
-                flex-grow: 0;
-                flex-shrink: 0;
-                fill: transparent;
-                justify-content: center;
-                position: relative;
+        .circle {
+            stroke: #37B877;
+        }
 
-                svg {
-                    height: 26px;
-                    width: 26px;
-                    stroke-width: 3px;
-                }
-
-                .polygon {
-                    stroke: #5064F1;
-                }
-
-                .square {
-                    stroke: #FF583D;
-                }
-
-                .circle {
-                    stroke: #37B877;
-                }
-
-                .triangle {
-                    stroke: #2EA8E5;
-                }
-
-            }
-
-            .col-content {
-                opacity: 1;
-                padding: 22px 32px 22px 0;
-
-                .title {
-                    font-family: Roboto-Medium;
-                    font-size: 16px;
-                    margin-bottom: 10px;
-                    color: #FFFFFF;
-                    text-align: left;
-                }
-                .title-desc {
-                    opacity: 0.66;
-                    font-family: Roboto-Regular;
-                    font-size: 14px;
-                    color: #FFFFFF;
-                    text-align: left;
-                    line-height: 20px;
-                }
-            }
+        .triangle {
+            stroke: #2EA8E5;
         }
     }
 }

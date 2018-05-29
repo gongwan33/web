@@ -4,33 +4,33 @@
 }
 
 %git-button {
-    text-transform: none;
-
     @include mdc-button-ink-color($mdc-theme-on-primary);
     @include mdc-button-container-fill-color($mdc-theme-primary);
     @include mdc-button-corner-radius($button-radius);
+
+    text-transform: none;
 }
 
 %git-card {
-    margin-bottom: 20px;
-    padding: 25px 30px;
-
     @include mdc-card-outline($card-outline);
     @include mdc-card-corner-radius($card-radius);
 
+    margin-bottom: 20px;
+    padding: 25px 30px;
+
     .card-instructions {
         .title {
-            color: $mdc-theme-on-surface; 
-            opacity: 0.7;
             @include mdc-typography(subtitle1);
 
+            color: $mdc-theme-on-surface; 
+            opacity: 0.7;
             font-weight: bold;
         }
 
         .desc {
+            @include mdc-typography(body2);
             color: $mdc-theme-on-surface; 
             opacity: 0.5;
-            @include mdc-typography(body2);
         }
     }
 
@@ -39,12 +39,45 @@
         padding: 0;
 
         .mdc-button {
-            margin-right: 10px;
             @extend %git-button;
+            margin-right: 10px;
         }
     }
 }
 
 .icon-italic {
     font-style: italic; 
+}
+
+.main-menu-list {
+
+    .mdc-list-item {
+        background-color: $mdc-theme-secondary;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 22px 36px;
+
+        .mdc-list-item__graphic {
+            svg {
+                stroke-width: 2px;
+                fill: transparent;
+                width: 100%;
+            }
+        }
+
+        .mdc-list-item__text {
+            @include mdc-typography(subtitle1); 
+            color: $mdc-theme-on-surface; 
+
+            font-family: Roboto-Medium;
+
+            .mdc-list-item__secondary-text {
+                @include mdc-typography(body2); 
+
+                margin-top: 10px;
+                opacity: 0.66;
+                white-space: pre-line;
+            }
+        }
+    }
 }

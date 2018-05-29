@@ -10,17 +10,17 @@
             margin-bottom: 36px;
 
             .title {
+                @include mdc-typography(headline6);
+
                 color: #FFF;
                 opacity: 0.9;
-
-                @include mdc-typography(headline6);
             }
 
             .desc {
+                @include mdc-typography(body2);
+
                 color: #FFF;
                 opacity: 0.7;
-
-                @include mdc-typography(body2);
             }
         }        
 
