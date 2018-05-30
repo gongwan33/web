@@ -17,7 +17,7 @@ app.get(getLocaleStylePath('/scrum-training'), (req, res) => {
 
 app.get(getLocaleStylePath('/network-service'), (req, res) => {
     let locale = getLocale();
-    res.render('pages/subpage', {pageLocale: locale, contentTag: 'networkservice'});
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'networkserviceconsulting'});
 });
 
 app.get(getLocaleStylePath('/miscellaneous'), (req, res) => {

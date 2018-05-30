@@ -24,7 +24,13 @@ mixin NSProjectCard(title, desc, githubHref, gitbookHref)
           | GitBook
 
 mixin SideMenuItem(svgShape, svgAttr, txt, hrefCont)
-  li(class="menu-item mdc-list-item")
+  -
+   let classStr = '';
+   if(contentTag == txt.replace(/[^\w]/g, '').toLowerCase()) {
+       classStr = ' mdc-list-item--activated'
+   }
+
+  li(class="menu-item mdc-list-item" + classStr)
     a(href=hrefCont)
       .item-icon(class="mdc-list-item__graphic")
         svg(class="polygon" viewBox="0 0 44 42" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink")
@@ -35,7 +41,7 @@ mixin SideMenuItem(svgShape, svgAttr, txt, hrefCont)
 mixin MiscellaneousItem(title, desc, hrefUrl)
   .mdc-layout-grid__cell--span-6
     a(href=hrefUrl)
-      .mdc-card(class="mdc-card--outlined")
+      .mdc-card(class="mdc-card--outlined cursor-pointer")
         .card-instructions
           .title= title
           .desc= desc

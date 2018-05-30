@@ -18,13 +18,13 @@
                     @include mdc-typography(subtitle2);
 
                     opacity: 0.5;
-                    color: #FFFFFF;
+                    color: $mdc-theme-on-secondary;
 
                     .item-icon {
                         svg {
                             fill: transparent;
                             opacity: 0.5;
-                            stroke: #FFF;
+                            stroke: $mdc-theme-on-secondary;
                             stroke-width: 4px;
                             width: 80%;
                         }
@@ -35,6 +35,32 @@
                         display: flex;
                         white-space: pre-line;
                     }
+                }
+            }
+
+        }
+
+        .menu-item.mdc-list-item--activated {
+            a {
+                color: $sidebar-active-color !important;
+                opacity: 1 !important;
+
+                svg {
+                    stroke: $sidebar-active-color !important;
+                    opacity: 1 !important;
+                }
+            }
+
+        }
+
+        .menu-item:hover {
+            a {
+                color: $sidebar-active-color !important;
+                opacity: 1 !important;
+
+                svg {
+                    stroke: $sidebar-active-color !important;
+                    opacity: 1 !important;
                 }
             }
         }

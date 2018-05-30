@@ -13,24 +13,6 @@
 @import 'foot';
 @import 'sub-page';
 
-body {
-    color: white;
-    background-color: $mdc-theme-background;
-}
-
-a {
-    align-items: center;
-    display: inherit;
-    text-decoration: none;
-}
-
-.item-label {
-    background-color: #fff;
-    box-shadow: 0 4px 6px 0 #000000; 
-    opacity: 0.08;
-}
-
-
 .content {
     display: flex;
     flex-wrap: nowrap;

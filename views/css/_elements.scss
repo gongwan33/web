@@ -49,14 +49,30 @@
             @extend %git-button;
             margin-right: 10px;
         }
+
+        .mdc-button:hover {
+            box-shadow: 0 4px 6px 0 #000000;
+            opacity: 1 !important;
+        }
     }
+}
+
+body {
+    color: $mdc-theme-on-primary;
+    background-color: $mdc-theme-background;
+}
+
+a {
+    align-items: center;
+    display: inherit;
+    text-decoration: none;
 }
 
 .icon-italic {
     font-style: italic; 
 }
 
-.mdc-card {
+.cursor-pointer {
     cursor: pointer;
 }
 
@@ -88,6 +104,23 @@
                 opacity: 0.66;
                 white-space: pre-line;
             }
+        }
+    }
+
+    .mdc-list-item:hover {
+        background-color: rgba($mdc-theme-primary, 0.08);
+        box-shadow: 0 4px 6px 0 #000000;
+    }
+}
+
+.mdc-card:hover {
+    .card-instructions {
+        .title {
+            opacity: 1 !important;
+        }
+
+        .desc {
+            opacity: 0.7 !important;
         }
     }
 }
