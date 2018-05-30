@@ -4,6 +4,9 @@
 }
 
 %sidebar-space {
+    flex-basis: $sidebar-pa;
+    flex-shrink: 0;
+    flex-grow: 0;
     min-width: $sidebar-min-width;
     max-width: $sidebar-max-width;
     width: $sidebar-pa;

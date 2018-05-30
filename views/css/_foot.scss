@@ -41,9 +41,10 @@ $back-arrow-margin-right: 15px;
             color: $mdc-theme-on-primary;
 
             .icon {
+                @include transition(mdc-animation-enter(margin, 1000ms));
+
                 margin-right: 0;
                 opacity: 0;
-                transition: mdc-animation-enter(margin, 1000ms);
             }
         }
     }
