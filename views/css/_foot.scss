@@ -21,9 +21,17 @@ $back-arrow-margin-right: 15px;
 
 .foot-wrapper {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
 
     .side-bar {
         @extend %sidebar-space;
+        flex-basis: 20%;
+        flex-grow: 1;
+        flex-shrink: 0;
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -50,6 +58,9 @@ $back-arrow-margin-right: 15px;
     }
 
     .copyright-content {
+        flex-basis: 70%;
+        flex-grow: 1;
+        flex-shrink: 0;
         width: 100%;
     }
 }

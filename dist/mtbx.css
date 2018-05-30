@@ -1305,12 +1305,12 @@ a.mdc-list-item {
   padding: 5px 30px 5px 30px; }
 
 .foot-wrapper .side-bar, .body-wrapper .side-bar {
-  flex-basis: 22%;
+  flex-basis: 20%;
   flex-shrink: 0;
   flex-grow: 0;
   min-width: 200px;
   max-width: 300px;
-  width: 22%; }
+  width: 20%; }
 
 .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button, .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions .mdc-button {
   border-radius: 2px;
@@ -1457,8 +1457,14 @@ a {
     padding: 0 16px 0 16px; }
 
 .foot-wrapper {
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center; }
   .foot-wrapper .side-bar {
+    flex-basis: 20%;
+    flex-grow: 1;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center; }
@@ -1485,13 +1491,18 @@ a {
         margin-right: 0;
         opacity: 0; }
   .foot-wrapper .copyright-content {
+    flex-basis: 70%;
+    flex-grow: 1;
+    flex-shrink: 0;
     width: 100%; }
 
 .body-wrapper {
   display: flex;
+  flex-wrap: wrap;
   min-height: 80vh; }
   .body-wrapper .side-bar {
-    margin: 30px; }
+    flex-grow: 1;
+    padding: 30px; }
     .body-wrapper .side-bar .menu-list {
       margin: 0;
       padding: 0;
@@ -1533,7 +1544,10 @@ a {
         stroke: #37B877 !important;
         opacity: 1 !important; }
   .body-wrapper .page-content {
-    margin: 30px 5% 30px 5%; }
+    flex-basis: 50%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 30px 5% 30px 5%; }
     .body-wrapper .page-content .title-wrapper {
       margin-bottom: 36px; }
       .body-wrapper .page-content .title-wrapper .title, .body-wrapper .page-content .title-wrapper .sm-title {
