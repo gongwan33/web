@@ -1,5 +1,6 @@
 .body-wrapper {
     display: flex;
+    min-height: 80vh;
     
     .side-bar {
         @extend %sidebar-space;
@@ -46,17 +47,23 @@
         .title-wrapper {
             margin-bottom: 36px;
 
+            .title, .sm-title {
+                color: $mdc-theme-on-secondary;
+                opacity: 0.9;
+            }
+
             .title {
                 @include mdc-typography(headline6);
+            }
 
-                color: #FFF;
-                opacity: 0.9;
+            .sm-title {
+                @include mdc-typography(subtitle2);
             }
 
             .desc {
                 @include mdc-typography(body2);
 
-                color: #FFF;
+                color: $mdc-theme-on-secondary;
                 opacity: 0.7;
             }
         }        
@@ -64,6 +71,30 @@
         .card-wrapper {
             .mdc-card {
                 @extend %git-card;
+
+                margin-bottom: 20px;
+                padding: 25px 30px;
+            }
+        }
+
+        .sm-card-wrapper {
+            margin-bottom: 95px;
+            padding: 20px 0;
+
+            .mdc-layout-grid__inner {
+                grid-gap: 15px;
+            }
+
+            a {
+                display: block;
+                height: 100%;
+            }
+
+            .mdc-card {
+                @extend %git-card;
+
+                height: 100%;
+                padding: 16px 31px;
             }
         }
     }

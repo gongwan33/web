@@ -1,4 +1,4 @@
-mixin menuBox(svgTag, svgClassTag, svgAttr, title, desc, href)
+mixin MainMenuBox(svgTag, svgClassTag, svgAttr, title, desc, href)
   li(class="item-box mdc-list-item")
     a(href=href)
       .mdc-list-item__graphic
@@ -8,7 +8,7 @@ mixin menuBox(svgTag, svgClassTag, svgAttr, title, desc, href)
         = title
         .mdc-list-item__secondary-text= desc
 
-mixin projectCard(title, desc, githubHref, gitbookHref) 
+mixin NSProjectCard(title, desc, githubHref, gitbookHref) 
   .mdc-card
     .card-instructions
       .title= title
@@ -23,7 +23,7 @@ mixin projectCard(title, desc, githubHref, gitbookHref)
           i(class="mdc-button__icon fas fa-book icon-italic")
           | GitBook
 
-mixin menuItem(svgShape, svgAttr, txt, hrefCont)
+mixin SideMenuItem(svgShape, svgAttr, txt, hrefCont)
   li(class="menu-item mdc-list-item")
     a(href=hrefCont)
       .item-icon(class="mdc-list-item__graphic")
@@ -31,4 +31,15 @@ mixin menuItem(svgShape, svgAttr, txt, hrefCont)
           #{svgShape}()&attributes(svgAttr)
 
       .item-text(class="mdc-list-item__text")= txt
+
+mixin MiscellaneousItem(title, desc, hrefUrl)
+  .mdc-layout-grid__cell--span-6
+    a(href=hrefUrl)
+      .mdc-card(class="mdc-card--outlined")
+        .card-instructions
+          .title= title
+          .desc= desc
+    
+    
+
 

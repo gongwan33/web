@@ -21,10 +21,10 @@ html
 
       .col-right
         ul(class="main-menu-list mdc-list mdc-list--two-line")
-          +menuBox('polygon', 'polygon', {points: '18.75,1.875 1.875,14.625 7.5,37.125 30,37.125 35.625,14.625'}, 'Scrum Training', 'Scrum is an iterative and incremental agile software development framework for managing product development.', '/scrum-training')
-          +menuBox('rect', 'square', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'rx': 8}, 'Network Service Consulting', 'Network is a vital infrastructure for global world. We provide assistance tools and consulting services to build up...', '/network-service')
-          +menuBox('circle', 'circle', {'cx': 20, 'cy': 20, 'r': 18}, 'Miscellaneous', 'We are passionate to explore cutting-edge technology to create prototype projects for fun.', 'miscellaneous')
-          +menuBox('polygon', 'triangle', {points: '19,1 1,38 38,38'}, 'Dorry Platform', 'Dorry is a professional enterprise platform, continually delivering secure enterprise services based on the leading technology...', 'dorry-platform')
+          +MainMenuBox('polygon', 'polygon', {points: '18.75,1.875 1.875,14.625 7.5,37.125 30,37.125 35.625,14.625'}, 'Scrum Training', 'Scrum is an iterative and incremental agile software development framework for managing product development.', '/scrum-training')
+          +MainMenuBox('rect', 'square', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'rx': 8}, 'Network Service Consulting', 'Network is a vital infrastructure for global world. We provide assistance tools and consulting services to build up...', '/network-service')
+          +MainMenuBox('circle', 'circle', {'cx': 20, 'cy': 20, 'r': 18}, 'Miscellaneous', 'We are passionate to explore cutting-edge technology to create prototype projects for fun.', 'miscellaneous')
+          +MainMenuBox('polygon', 'triangle', {points: '19,1 1,38 38,38'}, 'Dorry Platform', 'Dorry is a professional enterprise platform, continually delivering secure enterprise services based on the leading technology...', 'dorry-platform')
 
     include ./parts/footer.pug
 

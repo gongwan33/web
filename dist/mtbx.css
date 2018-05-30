@@ -1309,21 +1309,19 @@ a.mdc-list-item {
   max-width: 300px;
   width: 35%; }
 
-.body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
+.body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button, .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions .mdc-button {
   border-radius: 2px;
   opacity: 0.8;
   text-transform: none; }
-  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled), .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
     color: #FFFFFF; }
-  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled), .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
     background-color: rgba(255, 255, 255, 0.06); }
 
-.body-wrapper .page-content .card-wrapper .mdc-card {
+.body-wrapper .page-content .card-wrapper .mdc-card, .body-wrapper .page-content .sm-card-wrapper .mdc-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 2px;
-  margin-bottom: 20px;
-  padding: 25px 30px; }
-  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .title {
+  border-radius: 2px; }
+  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .title, .body-wrapper .page-content .sm-card-wrapper .mdc-card .card-instructions .title {
     font-family: Roboto, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1336,7 +1334,7 @@ a.mdc-list-item {
     color: #FFFFFF;
     opacity: 0.7;
     font-weight: bold; }
-  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .desc {
+  .body-wrapper .page-content .card-wrapper .mdc-card .card-instructions .desc, .body-wrapper .page-content .sm-card-wrapper .mdc-card .card-instructions .desc {
     font-family: Roboto, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -1348,14 +1346,17 @@ a.mdc-list-item {
     text-transform: inherit;
     color: #FFFFFF;
     opacity: 0.5; }
-  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions {
+  .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions, .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions {
     margin-top: 25px;
     padding: 0; }
-    .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button {
+    .body-wrapper .page-content .card-wrapper .mdc-card .mdc-card__actions .mdc-button, .body-wrapper .page-content .sm-card-wrapper .mdc-card .mdc-card__actions .mdc-button {
       margin-right: 10px; }
 
 .icon-italic {
   font-style: italic; }
+
+.mdc-card {
+  cursor: pointer; }
 
 .main-menu-list .mdc-list-item {
   background-color: rgba(255, 255, 255, 0.06);
@@ -1456,7 +1457,8 @@ a.mdc-list-item {
     width: 100%; }
 
 .body-wrapper {
-  display: flex; }
+  display: flex;
+  min-height: 80vh; }
   .body-wrapper .side-bar {
     margin: 30px; }
     .body-wrapper .side-bar .menu-list {
@@ -1491,6 +1493,9 @@ a.mdc-list-item {
     margin: 30px 5% 30px 5%; }
     .body-wrapper .page-content .title-wrapper {
       margin-bottom: 36px; }
+      .body-wrapper .page-content .title-wrapper .title, .body-wrapper .page-content .title-wrapper .sm-title {
+        color: #FFFFFF;
+        opacity: 0.9; }
       .body-wrapper .page-content .title-wrapper .title {
         font-family: Roboto, sans-serif;
         -moz-osx-font-smoothing: grayscale;
@@ -1500,9 +1505,17 @@ a.mdc-list-item {
         font-weight: 500;
         letter-spacing: 0.0125em;
         text-decoration: inherit;
-        text-transform: inherit;
-        color: #FFF;
-        opacity: 0.9; }
+        text-transform: inherit; }
+      .body-wrapper .page-content .title-wrapper .sm-title {
+        font-family: Roboto, sans-serif;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 500;
+        letter-spacing: 0.00714em;
+        text-decoration: inherit;
+        text-transform: inherit; }
       .body-wrapper .page-content .title-wrapper .desc {
         font-family: Roboto, sans-serif;
         -moz-osx-font-smoothing: grayscale;
@@ -1513,8 +1526,22 @@ a.mdc-list-item {
         letter-spacing: 0.01786em;
         text-decoration: inherit;
         text-transform: inherit;
-        color: #FFF;
+        color: #FFFFFF;
         opacity: 0.7; }
+    .body-wrapper .page-content .card-wrapper .mdc-card {
+      margin-bottom: 20px;
+      padding: 25px 30px; }
+    .body-wrapper .page-content .sm-card-wrapper {
+      margin-bottom: 95px;
+      padding: 20px 0; }
+      .body-wrapper .page-content .sm-card-wrapper .mdc-layout-grid__inner {
+        grid-gap: 15px; }
+      .body-wrapper .page-content .sm-card-wrapper a {
+        display: block;
+        height: 100%; }
+      .body-wrapper .page-content .sm-card-wrapper .mdc-card {
+        height: 100%;
+        padding: 16px 31px; }
 
 body {
   color: white;

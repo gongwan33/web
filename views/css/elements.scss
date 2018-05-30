@@ -22,9 +22,6 @@
     @include mdc-card-outline($card-outline);
     @include mdc-card-corner-radius($card-radius);
 
-    margin-bottom: 20px;
-    padding: 25px 30px;
-
     .card-instructions {
         .title {
             @include mdc-typography(subtitle1);
@@ -56,8 +53,11 @@
     font-style: italic; 
 }
 
-.main-menu-list {
+.mdc-card {
+    cursor: pointer;
+}
 
+.main-menu-list {
     .mdc-list-item {
         background-color: $mdc-theme-secondary;
         height: auto;
