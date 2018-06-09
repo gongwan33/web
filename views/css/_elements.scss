@@ -15,7 +15,7 @@
 
 %git-button {
     @include mdc-button-ink-color($mdc-theme-on-primary);
-    @include mdc-button-container-fill-color($mdc-theme-secondary);
+    @include mdc-button-container-fill-color($button-fill);
     @include mdc-button-corner-radius($button-radius);
 
     opacity: 0.8;
@@ -67,7 +67,7 @@
         }
 
         .mdc-button:hover {
-            box-shadow: 0 4px 6px 0 #000000;
+            box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
             opacity: 1 !important;
         }
     }
@@ -140,6 +140,8 @@ a {
 }
 
 .mdc-card:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+
     .card-instructions {
         .title {
             opacity: 1 !important;

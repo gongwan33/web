@@ -1319,7 +1319,7 @@ a.mdc-list-item {
   .body-wrapper .page-content .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
     color: #FFFFFF; }
   .body-wrapper .page-content .mdc-card .mdc-card__actions .mdc-button:not(:disabled) {
-    background-color: rgba(255, 255, 255, 0.05); }
+    background-color: #272B31; }
 
 .body-wrapper .page-content .mdc-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1366,7 +1366,7 @@ a.mdc-list-item {
     .body-wrapper .page-content .mdc-card .mdc-card__actions .mdc-button:first-child {
       margin-right: 10px; }
     .body-wrapper .page-content .mdc-card .mdc-card__actions .mdc-button:hover {
-      box-shadow: 0 4px 6px 0 #000000;
+      box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2);
       opacity: 1 !important; }
 
 body {
@@ -1428,11 +1428,12 @@ a {
 .main-menu-list .mdc-list-item:hover {
   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0)); }
 
-.mdc-card:hover .card-instructions .title {
-  opacity: 1 !important; }
-
-.mdc-card:hover .card-instructions .desc {
-  opacity: 0.7 !important; }
+.mdc-card:hover {
+  background-color: rgba(255, 255, 255, 0.03) !important; }
+  .mdc-card:hover .card-instructions .title {
+    opacity: 1 !important; }
+  .mdc-card:hover .card-instructions .desc {
+    opacity: 0.7 !important; }
 
 .head-bar {
   align-items: center;
@@ -1459,11 +1460,13 @@ a {
     text-align: left; }
   .head-bar .hiring-link {
     align-self: center;
-    color: #FFFFFF;
+    color: rgba(255, 255, 255, 0.8);
     font-family: Roboto-Bold;
     font-size: 14px;
     margin-left: auto;
     text-align: right; }
+  .head-bar .hiring-link:hover {
+    color: white; }
 
 .foot-bar, .foot-bar-sub {
   align-items: center;

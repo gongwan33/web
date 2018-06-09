@@ -33,11 +33,15 @@
 
     .hiring-link {
         align-self: center;
-        color: #FFFFFF;
+        color: rgba(255, 255, 255, 0.8);
         font-family: Roboto-Bold;
         font-size: 14px;
         margin-left: auto;
         text-align: right;
+    }
+
+    .hiring-link:hover {
+        color: rgb(255, 255, 255)
     }
 }
 
