@@ -1,11 +1,18 @@
 include ../_mixins
 
 .side-bar
-   .menu-list-wrapper
-     ul(class="menu-list mdc-list--avatar")
-       +SideMenuItem('polygon', {'points': "22.0081142 1 43.0373586 16.2786405 35.004902 41 9.01132631 41 0.978869674 16.2786405"}, 'Scrum Training', '/scrum-training')
-       +SideMenuItem('rect', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'rx': 8}, 'Network Service Consulting', '/network-service')
-       +SideMenuItem('circle', {'cx': 20, 'cy': 20, 'r': 19}, 'Miscellaneous', '/miscellaneous')
-       +SideMenuItem('polygon', {'points': '20.5 0 40 39 1 39'}, 'Dorry Platform', '/dorry-platform')
-         
+  .menu-list-wrapper
+    ul(class="menu-list mdc-list--avatar")
+      +SideMenuItem('polygon', {'points': "22.0081142 1 43.0373586 16.2786405 35.004902 41 9.01132631 41 0.978869674 16.2786405"}, 'Scrum Training', '/scrum-training')
+      +SideMenuItem('rect', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'rx': 8}, 'Network Service Consulting', '/network-service')
+      +SideMenuItem('circle', {'cx': 20, 'cy': 20, 'r': 19}, 'Miscellaneous', '/miscellaneous')
+      +SideMenuItem('polygon', {'points': '20.5 0 40 39 1 39'}, 'Dorry Platform', '/dorry-platform')
+        
+  .foot
+    a(href="/") 
+      .icon
+        i(class="fas fa-arrow-left")
+    
+      | Back to home
+
 

@@ -11,19 +11,19 @@ html
     .body-wrapper
       include ../parts/side-bar.pug
 
-      if contentTag == 'networkserviceconsulting'
-        include ../parts/networkserviceconsulting
-      else if contentTag == 'miscellaneous'
-        include ../parts/miscellaneous
-      else if contentTag == 'scrumtraining'
-        include ../parts/scrumtraining
-      else if contentTag == 'dorryplatform'
-        include ../parts/dorryplatform
-      else if contentTag == 'hiring'
-        include ../parts/hiring
+      .page-content
+        if contentTag == 'networkserviceconsulting'
+          include ../parts/networkserviceconsulting
+        else if contentTag == 'miscellaneous'
+          include ../parts/miscellaneous
+        else if contentTag == 'scrumtraining'
+          include ../parts/scrumtraining
+        else if contentTag == 'dorryplatform'
+          include ../parts/dorryplatform
+        else if contentTag == 'hiring'
+          include ../parts/hiring
+        
+        include ../parts/footer-sub.pug
 
 
-
-
-    include ../parts/footer-back.pug
 

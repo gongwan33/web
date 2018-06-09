@@ -25,8 +25,18 @@
 %git-card {
     @include mdc-card-outline($card-outline);
     @include mdc-card-corner-radius($card-radius);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
 
     .card-instructions {
+        flex-basis: 30%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        margin-right: 28px;
+
         .title {
             @include mdc-typography(subtitle1);
 
@@ -43,11 +53,16 @@
     }
 
     .mdc-card__actions {
-        margin-top: 25px;
-        padding: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+        padding: 18px 0px 18px 0px;
 
         .mdc-button {
             @extend %git-button;
+        }
+
+        .mdc-button:first-child {
             margin-right: 10px;
         }
 
@@ -67,6 +82,10 @@ a {
     align-items: center;
     display: inherit;
     text-decoration: none;
+}
+
+*:hover {
+    transition: all 0.3s ease-in-out;
 }
 
 .icon-italic {
@@ -108,9 +127,15 @@ a {
         }
     }
 
+    .mdc-list-item:hover::before {
+        opacity: 0;
+    }
+
     .mdc-list-item:hover {
-        background-color: rgba($mdc-theme-primary, 0.08);
-        box-shadow: 0 4px 6px 0 #000000;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+
+        //background-color: rgba($mdc-theme-primary, 0.08);
+        //box-shadow: 0 4px 6px 0 #000000;
     }
 }
 

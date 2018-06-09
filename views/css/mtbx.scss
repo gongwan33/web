@@ -13,9 +13,11 @@
 @import 'foot';
 @import 'sub-page';
 
+
 .content {
     display: flex;
     flex-wrap: nowrap;
+    margin-top: 66px;
     margin-bottom: 95px;
 
     .col-left {
@@ -44,10 +46,15 @@
                 margin-bottom: 75px;
                 opacity: 0.49;
             }
-            img {
-                height: auto;
-                width: 95%;
-            } 
+
+            .img-box {
+                width: 100%;
+
+                img {
+                    height: auto;
+                    width: 95%;
+                } 
+            }
         }
     }
 

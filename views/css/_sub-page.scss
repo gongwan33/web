@@ -7,6 +7,10 @@
         @extend %sidebar-space;
         flex-grow: 1;
         padding: 30px;
+        position: fixed;
+        top: 66px;
+        bottom: 0;
+        width: 270px;
 
         .menu-list {
             margin: 0;
@@ -67,6 +71,40 @@
             }
         }
 
+        .foot {
+            @extend %sidebar-space;
+            flex-basis: 20%;
+            flex-grow: 1;
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            bottom: 0;
+            justify-content: center;
+            position: absolute;
+            margin-bottom: 26px;
+
+            a:hover{
+                .icon {
+                    margin-right: $back-arrow-margin-right;
+                    opacity: 1;
+                }
+            }
+
+            a {
+                @include mdc-typography(subtitle2);
+
+                color: $mdc-theme-on-primary;
+
+                .icon {
+                    @include transition(mdc-animation-enter(margin, 1000ms));
+
+                    margin-right: 0;
+                    opacity: 0;
+                }
+            }
+        }
+
     }
 
     .page-content {
@@ -74,6 +112,9 @@
         flex-grow: 1;
         flex-shrink: 0;
         padding: 30px 5% 30px 5%;
+        position: relative;
+        margin-left: 270px;
+        margin-top: 66px;
 
         .title-wrapper {
             margin-bottom: 36px;
@@ -99,13 +140,11 @@
             }
         }        
 
-        .card-wrapper {
-            .mdc-card {
-                @extend %git-card;
+        .mdc-card {
+            @extend %git-card;
 
-                margin-bottom: 20px;
-                padding: 25px 30px;
-            }
+            margin-bottom: 20px;
+            padding: 25px 30px;
         }
 
         .sm-card-wrapper {
@@ -116,17 +155,21 @@
                 grid-gap: 15px;
             }
 
-            a {
-                display: block;
-                height: 100%;
-            }
-
             .mdc-card {
-                @extend %git-card;
-
-                height: 100%;
-                padding: 16px 31px;
+                margin-bottom: 0;
             }
+
+           // a {
+           //     display: block;
+           //     height: 100%;
+           // }
+
+           // .mdc-card {
+           //     @extend %git-card;
+
+           //     height: 100%;
+           //     padding: 16px 31px;
+           // }
         }
     }
 }

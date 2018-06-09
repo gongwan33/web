@@ -1,8 +1,16 @@
 .head-bar {
     @extend %head-space;
 
-    align-items: baseline;
+    align-items: center;
+    background-color: #191c20;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 66px;
+
+    z-index: 100;
 
     a {
         align-items: baseline;

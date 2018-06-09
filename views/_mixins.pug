@@ -16,12 +16,14 @@ mixin NSProjectCard(title, desc, githubHref, gitbookHref)
 
     .mdc-card__actions
       .mdc-card__actions-buttons
-        button(class="mdc-button ")
+        a(class="mdc-button " href=githubHref)
           i(class="mdc-button__icon fab fa-github")
           | GitHub
-        button(class="mdc-button ")
-          i(class="mdc-button__icon fas fa-book icon-italic")
-          | GitBook
+
+        if gitbookHref
+          a(class="mdc-button " href=gitbookHref)
+            i(class="mdc-button__icon fas fa-book icon-italic")
+            | GitBook
 
 mixin SideMenuItem(svgShape, svgAttr, txt, hrefCont)
   -
@@ -38,14 +40,20 @@ mixin SideMenuItem(svgShape, svgAttr, txt, hrefCont)
 
       .item-text(class="mdc-list-item__text")= txt
 
-mixin MiscellaneousItem(title, desc, hrefUrl)
+mixin MiscellaneousItem(title, desc, hrefHubUrl, hrefBookUrl)
   .mdc-layout-grid__cell--span-6
-    a(href=hrefUrl)
-      .mdc-card(class="mdc-card--outlined cursor-pointer")
-        .card-instructions
-          .title= title
-          .desc= desc
-    
+    +NSProjectCard(title, desc, hrefHubUrl, hrefBookUrl)
+ 
+//- 
+  Seems to be deprecated
+  mixin MiscellaneousItem(title, desc, hrefUrl)
+    .mdc-layout-grid__cell--span-6
+      a(href=hrefUrl)
+        .mdc-card(class="mdc-card--outlined cursor-pointer")
+          .card-instructions
+            .title= title
+            .desc= desc
+      
     
 
 
