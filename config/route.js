@@ -10,24 +10,24 @@ app.get(getLocaleStylePath('/'), (req, res) => {
     res.render('index', {pageLocale: locale});
 });
 
-app.get(getLocaleStylePath('/scrum-training'), (req, res) => {
+app.get(getLocaleStylePath('/application-market'), (req, res) => {
     let locale = getLocale();
-    res.render('pages/subpage', {pageLocale: locale, contentTag: 'scrumtraining'});
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'applicationmarket'});
 });
 
 app.get(getLocaleStylePath('/network-service'), (req, res) => {
     let locale = getLocale();
-    res.render('pages/subpage', {pageLocale: locale, contentTag: 'networkserviceconsulting'});
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'networkservice'});
 });
 
-app.get(getLocaleStylePath('/miscellaneous'), (req, res) => {
+app.get(getLocaleStylePath('/tool-suite'), (req, res) => {
     let locale = getLocale();
-    res.render('pages/subpage', {pageLocale: locale, contentTag: 'miscellaneous'});
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'toolsuite'});
 });
 
-app.get(getLocaleStylePath('/dorry-platform'), (req, res) => {
+app.get(getLocaleStylePath('/technical-tutorial'), (req, res) => {
     let locale = getLocale();
-    res.render('pages/subpage', {pageLocale: locale, contentTag: 'dorryplatform'});
+    res.render('pages/subpage', {pageLocale: locale, contentTag: 'technicaltutorial'});
 });
 
 app.get(getLocaleStylePath('/hiring'), (req, res) => {

@@ -1,0 +1,14 @@
+include ../_mixins
+
+.title-wrapper
+  .title Application Market 
+  .desc IT service is fundamental facility for every enterprise. We provide user friendly and robust IT applications for your enterprise. 
+
+.sm-card-wrapper(class="mdc-layout-grid")
+  .mdc-layout-grid__inner
+    +MiscellaneousItem('SSMTP docker images', 'Deliver email from a local computer to a configured mailhost', 'https://github.com/ChineseOpera/x86-ssmtp')
+    +MiscellaneousItem('Mediawiki docker images', 'Knowledge base build and share', 'https://github.com/ChineseTeapot/rpi-mediawiki')
+    +MiscellaneousItem('Samba docker images', 'Secure, stable and fast file and print services for all clients using the SMB/CIFS protocol', 'https://github.com/ChineseTeapot/rpi-samba')
+    +MiscellaneousItem('Mysql docker images', 'Mysql database docker image', 'https://github.com/ChineseTeapot/rpi-mysql')
+
+

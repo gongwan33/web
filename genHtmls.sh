@@ -8,28 +8,40 @@ re_name() {
 }
 
 echo "Cleaning target directory..."
-rm -r ./htmlout/*
+rm -rf ./htmlout/*
 
 pug views/index.pug -o htmlout -P
 
-pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "scrumtraining"}' -P
-re_name scrumtraining
+pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "networkservice"}' -P
+re_name network-service 
 
-pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "networkserviceconsulting"}' -P
-re_name networkserviceconsulting
+pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "applicationmarket"}' -P
+re_name application-market
 
-pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "miscellaneous"}' -P
-re_name miscellaneous
+pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "technicaltutorial"}' -P
+re_name technical-tutorial
 
-pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "dorryplatform"}' -P
-re_name dorryplatform 
+pug views/pages/subpage.pug -o htmlout/pages -O '{contentTag: "toolsuite"}' -P
+re_name tool-suite
 
-echo 'Copying css...'
-mkdir ./htmlout/css
-cp -r ./dist/*.css ./htmlout/css/
+echo 'Copying assets...'
+mkdir ./htmlout/assets
+cp -r ./dist ./htmlout/assets
 
 echo 'Copying fontawesome...'
-cp -r ./font ./htmlout/
+cp -r ./font ./htmlout/assets
 
+echo 'Copying image'
+cp -r ./imgs ./htmlout/assets
 
+replace() {
+    sed -i 's/\/network-service/\/pages\/network-service.html/g' $1
+    sed -i 's/\/application-market/\/pages\/application-market.html/g' $1
+    sed -i 's/\/technical-tutorial/\/pages\/technical-tutorial.html/g' $1
+    sed -i 's/\/tool-suite/\/pages\/tool-suite.html/g' $1
+}
 
+replace htmlout/index.html
+for f in htmlout/pages/*.html; do
+    replace $f
+done

@@ -1,0 +1,14 @@
+include ../_mixins
+
+.title-wrapper
+  .title Network Services
+  .desc Network is a vital infrastructure for global world. We provide assistance tools and consulting services to bootstrap the network for your working environment. 
+
+.sm-card-wrapper(class="mdc-layout-grid")
+  .mdc-layout-grid__inner
+    +MiscellaneousItem('DDNS', 'Install DDNS noip client', 'https://github.com/SteamedDumplings/DDNS')
+    +MiscellaneousItem('ntopng', 'ntopng manager for network status visualization', 'https://github.com/SteamedDumplings/ntopng')
+    +MiscellaneousItem('net-measurement', 'Tool suite to measure network bandwidth, packet loss, latency', 'https://github.com/SteamedDumplings/net-measurement')
+    +MiscellaneousItem('net-diagnose', 'A light tool to diagnose dns pollution', 'https://github.com/SteamedDumplings/net-diagnose')
+
+
