@@ -10,6 +10,7 @@ html
 
     .body-wrapper
       include ../parts/side-bar.pug
+      include ../parts/side-bar-drawerable.pug
 
       .page-content
         if contentTag == 'networkservice'
@@ -24,6 +25,8 @@ html
           include ../parts/hiring
         
         include ../parts/footer-sub.pug
+
+    script(src="/assets/dist/sidebar.js" type="text/javascript")
 
 
 

@@ -15,10 +15,12 @@
     "@material/animation": "^0.34.0",
     "@material/button": "^0.35.0",
     "@material/card": "^0.35.0",
+    "@material/drawer": "^0.36.1",
     "@material/layout-grid": "^0.34.0",
     "@material/list": "^0.35.0",
     "@material/theme": "^0.35.0",
     "@material/typography": "^0.35.0",
+    "copy-webpack-plugin": "^4.5.1",
     "express": "^4.16.3",
     "i18n": "^0.8.3",
     "path": "^0.12.7",
@@ -32,6 +34,6 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.8.3",
-    "webpack-cli": "^2.1.4"
+    "webpack-cli": "^2.1.5"
   }
 }

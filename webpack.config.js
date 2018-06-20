@@ -6,11 +6,18 @@ const extractSass = new ExtractTextPlugin({
         filename: "[name].css",
 //        disable: process.env.NODE_ENV === "development"
 });
+//const CopyWebpackPlugin = require('copy-webpack-plugin')
+//
+//const copyTask = new CopyWebpackPlugin([ 
+//    {from: './views/js/sidebar.js', to: './', toType: 'dir'},
+//]);
+
 
 module.exports = {
     mode: 'development',
     entry: {
-        mtbx: './views/js/mtbx.js'
+        mtbx: './views/js/mtbx.js',
+        sidebar: './views/js/sidebar.js',
     },
     output: {
         filename: '[name].js',
@@ -36,5 +43,6 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         extractSass,
+//        copyTask,
     ]
 };

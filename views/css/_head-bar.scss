@@ -43,5 +43,17 @@
     .hiring-link:hover {
         color: rgb(255, 255, 255)
     }
+
+    .menu {
+        display: none;
+        margin-right: 20px;
+    }
 }
 
+@media only screen and (max-width: $mobile-breakpoint) {
+    .head-bar {
+       .menu {
+           display: inline-block;
+       }
+   }
+}
