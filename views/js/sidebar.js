@@ -7,6 +7,50 @@ const pdrawer = new MDCPersistentDrawer(perDrawerEle);
 
 const breakpoint = 1024;
 
+function btnDealer() {
+    let normalCardWrapper = document.querySelector('.card-wrapper'); 
+    let cardGps = document.querySelectorAll('.mdc-card');
+    let wrapModSign = false;
+
+    if(cardGps) {
+        for(let i = 0; i < cardGps.length; i++) {
+            let card = cardGps[i];
+            let instruction = card.querySelector('.card-instructions');
+            let btnGp = card.querySelector('.mdc-card__actions');
+
+            if(!instruction || !btnGp) {
+                continue;
+            }
+
+            let instructionRect = instruction.getBoundingClientRect();
+            let rectBtnGp = btnGp.getBoundingClientRect();
+
+            console.log(instructionRect.top + instructionRect.height);
+            console.log(rectBtnGp.top);
+            if(instructionRect.top + instructionRect.height <= rectBtnGp.top) {
+                let btnGps = document.querySelectorAll('.mdc-card__actions');
+                for(let j = 0; j < btnGps.length; j++) {
+                    let bp = btnGps[j];
+                    bp.style.width = rectBtnGp.width + 'px';
+                    bp.style.padding = "20px 0 0 0";
+                }
+                wrapModSign = true;
+                break;
+            } 
+        }
+
+        if(!wrapModSign) {
+            let btnGps = document.querySelectorAll('.mdc-card__actions');
+            for(let i = 0; i < btnGps.length; i++) {
+                let bp = btnGps[i];
+                bp.style.width = '';
+                bp.style.padding = "8px";
+            }
+
+        }
+    }
+}
+
 document.querySelector('.menu').addEventListener('click', () => {
     let width = document.body.clientWidth;
     if(width < breakpoint) {
@@ -41,6 +85,8 @@ window.onresize = function(event) {
         pdrawer.open = true;
         drawer.open = false;
     }
+
+    btnDealer();
 }
 
 oldEvent = window.onload;
@@ -64,7 +110,7 @@ window.onload = function() {
 
     let winHeight = window.innerHeight;
     let footEle = document.querySelector('.foot-bar-sub');
-    var rectFoot = footEle.getBoundingClientRect();
+    let rectFoot = footEle.getBoundingClientRect();
 
     if(rectFoot.top + rectFoot.height < winHeight) {
         let originMarginTop = footEle.style.marginTop ? footEle.style.marginTop : window.getComputedStyle(footEle).marginTop;
@@ -80,6 +126,7 @@ window.onload = function() {
         }
     }
 
+    btnDealer();
 } 
 
 
