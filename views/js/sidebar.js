@@ -61,4 +61,25 @@ window.onload = function() {
         perDrawerEle.style.display = '';
         pdrawer.open = true;
     }
+
+    let winHeight = window.innerHeight;
+    let footEle = document.querySelector('.foot-bar-sub');
+    var rectFoot = footEle.getBoundingClientRect();
+
+    if(rectFoot.top + rectFoot.height < winHeight) {
+        let originMarginTop = footEle.style.marginTop ? footEle.style.marginTop : window.getComputedStyle(footEle).marginTop;
+        originMarginTop = originMarginTop.replace("px", '');
+
+        if(!originMarginTop) {
+            originMarginTop = 0;
+        }
+
+        let targetTop = winHeight - rectFoot.height - rectFoot.top + Number(originMarginTop) - 25;
+        if(targetTop > 66) {
+            footEle.style.marginTop = targetTop + 'px'; 
+        }
+    }
+
 } 
+
+
