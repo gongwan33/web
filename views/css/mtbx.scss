@@ -8,12 +8,39 @@
 @import '@material/animation/functions';
 @import '@material/drawer/mdc-drawer';
 
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('/assets/font/Roboto/Roboto-Bold.ttf');
+    src: url('/assets/font/Roboto/Roboto-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('/assets/font/Roboto/Roboto-Light.ttf');
+    src: url('/assets/font/Roboto/Roboto-Light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('/assets/font/Roboto/Roboto-Regular.ttf');
+    src: url('/assets/font/Roboto/Roboto-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('/assets/font/Roboto/Roboto-Medium.ttf');
+    src: url('/assets/font/Roboto/Roboto-Medium.ttf') format('truetype'),
+}
+
 @import 'elements';
 
 @import 'head-bar';
 @import 'foot';
 @import 'sub-page';
 
+html {
+    overflow-x: hidden;
+}
 
 .content {
     display: flex;

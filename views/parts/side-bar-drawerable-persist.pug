@@ -1,0 +1,20 @@
+include ../_mixins
+
+aside(class="mdc-drawer mdc-drawer--persistent mdc-typography")
+  nav(class="mdc-drawer__drawer")
+    .side-bar-drawerable
+      .menu-list-wrapper
+        ul(class="menu-list mdc-list--avatar")
+          +SideMenuItem('polygon', {'points': "22.0081142 1 43.0373586 16.2786405 35.004902 41 9.01132631 41 0.978869674 16.2786405"}, 'Network Service', '/network-service')
+          +SideMenuItem('rect', {'height': 39, 'width': 39, 'x': 0.5, 'y': 0.5, 'rx': 8}, 'Application Market', '/application-market')
+          +SideMenuItem('circle', {'cx': 20, 'cy': 20, 'r': 19}, 'Tool Suite', '/tool-suite')
+          +SideMenuItem('polygon', {'points': '20.5 0 40 39 1 39'}, 'Technical Tutorial', '/technical-tutorial')
+            
+      .foot
+        a(href="/") 
+          .icon
+            i(class="fas fa-arrow-left")
+        
+          | Back to home
+
+

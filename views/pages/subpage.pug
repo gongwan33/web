@@ -6,11 +6,12 @@ html
     title Network Service Consulting
 
   body
-    include ../parts/header-bar.pug
+    include ../parts/header-bar-sub.pug
 
     .body-wrapper
-      include ../parts/side-bar.pug
+      //include ../parts/side-bar.pug
       include ../parts/side-bar-drawerable.pug
+      include ../parts/side-bar-drawerable-persist.pug
 
       .page-content
         if contentTag == 'networkservice'

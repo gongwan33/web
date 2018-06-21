@@ -18,6 +18,8 @@
     @include mdc-button-container-fill-color($button-fill);
     @include mdc-button-corner-radius($button-radius);
 
+    height: 30px;
+    padding: 0 6px 0 6px;
     opacity: 0.8;
     text-transform: none;
 }
@@ -25,6 +27,8 @@
 %git-card {
     @include mdc-card-outline($card-outline);
     @include mdc-card-corner-radius($card-radius);
+
+    box-shadow: none;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -32,10 +36,10 @@
     height: 100%;
 
     .card-instructions {
-        flex-basis: 30%;
+        flex-basis: 60%;
         flex-grow: 1;
         flex-shrink: 1;
-        margin-right: 28px;
+        margin-right: 22px;
 
         .title {
             @include mdc-typography(subtitle1);
@@ -55,8 +59,6 @@
     .mdc-card__actions {
         flex-grow: 0;
         flex-shrink: 0;
-
-        padding: 18px 0px 18px 0px;
 
         .mdc-button {
             @extend %git-button;
@@ -98,7 +100,7 @@ a {
 
 .main-menu-list {
     .mdc-list-item {
-        background-color: $mdc-theme-secondary;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0));
         height: auto;
         margin-bottom: 10px;
         padding: 22px 36px;
@@ -132,9 +134,7 @@ a {
     }
 
     .mdc-list-item:hover {
-        background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
-
-        //background-color: rgba($mdc-theme-primary, 0.08);
+        background-color: rgba(255, 255, 255, 0.03);
         //box-shadow: 0 4px 6px 0 #000000;
     }
 }
@@ -153,4 +153,6 @@ a {
     }
 }
 
-
+.mdc-drawer__drawer {
+    border: none !important;
+}
