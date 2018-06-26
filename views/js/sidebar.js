@@ -25,8 +25,6 @@ function btnDealer() {
             let instructionRect = instruction.getBoundingClientRect();
             let rectBtnGp = btnGp.getBoundingClientRect();
 
-            console.log(instructionRect.top + instructionRect.height);
-            console.log(rectBtnGp.top);
             if(instructionRect.top + instructionRect.height <= rectBtnGp.top) {
                 let btnGps = document.querySelectorAll('.mdc-card__actions');
                 for(let j = 0; j < btnGps.length; j++) {
