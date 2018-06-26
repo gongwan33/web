@@ -2,7 +2,7 @@ include ../_mixins
 
 aside(class="mdc-drawer mdc-drawer--persistent mdc-typography mdc-drawer--open")
   nav(class="mdc-drawer__drawer")
-    .side-bar-drawerable
+    .side-bar-drawerable(style="position:absolute")
       .menu-list-wrapper
         ul(class="menu-list mdc-list--avatar")
           +SideMenuItem('polygon', {'points': "22.0081142 1 43.0373586 16.2786405 35.004902 41 9.01132631 41 0.978869674 16.2786405"}, 'Network Service', '/network-service')
